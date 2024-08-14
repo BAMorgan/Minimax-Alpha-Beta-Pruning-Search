@@ -1,6 +1,6 @@
 import unittest
 from GameSearch import GameSearch
-from TurnBasedGame import TurnBasedGame
+from MazeRunner import TurnBasedGame
 
 class TestMinimax(unittest.TestCase):
 
