@@ -19,7 +19,7 @@ class TurnBasedGame:
         self.current_player = self.max
         self.turn_label = textLabel(self.maze, "Turn", "Max")
 
-        self.depth = 2  # Depth for the minimax algorithm
+        self.depth = 5  # Depth for the minimax algorithm
         self.game_search = GameSearch(self)
 
         self.enable_turn_based_control()
@@ -106,9 +106,11 @@ class TurnBasedGame:
         return neighbors
 
     def ai_move(self):
-        best_move = self.game_search.get_best_move()
+        best_move = self.game_search.get_best_move(alphaBeta=True)
         if best_move:
             self.apply_move_to_agent(self.min, best_move)
+
+        self.game_search.print_evaluation_results()
 
         if self.min.position == self.goal:
             self.turn_label.value = f"{self.min.color.name.capitalize()} Wins!"
