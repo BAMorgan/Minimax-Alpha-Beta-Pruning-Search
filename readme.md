@@ -1,4 +1,4 @@
-# Grid/Maze Searth with Minimax annd Alpha-Beta Pruning
+# Grid/Maze Search with Minimax annd Alpha-Beta Pruning
 
 ## Overview
 This project implements a **Maze Chase game** where an **AI player (MAX)** competes against a **human player (MIN)** to reach a randomly placed goal in a **10×10** or **20×30** maze. The AI uses **Minimax and Alpha-Beta Pruning** to determine the best moves. The game supports **GUI visualization**, **console interactions**, and game statistics tracking.
